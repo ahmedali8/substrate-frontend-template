@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React, { createRef, useState } from 'react'
 import {
   Container,
   Dimmer,
@@ -22,6 +22,7 @@ import NodeInfo from './NodeInfo'
 import TemplateModule from './TemplateModule'
 import Transfer from './Transfer'
 import Upgrade from './Upgrade'
+import MultisigRemark from './MultisigRemark'
 
 function Main() {
   const { apiState, apiError, keyringState } = useSubstrateState()
@@ -83,6 +84,9 @@ function Main() {
           </Grid.Row>
           <Grid.Row>
             <TemplateModule />
+          </Grid.Row>
+          <Grid.Row>
+            <MultisigRemark />
           </Grid.Row>
         </Grid>
       </Container>
